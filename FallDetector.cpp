@@ -1,7 +1,3 @@
-//
-// Created by Agnieszka Lempaszek on 2019-06-20.
-//
-
 #pragma once
 
 #include "FallDetector.h"
@@ -25,23 +21,10 @@ void FallDetector::checkIfStaysInPlace(time_t start, bool* isChecking, bool* isF
     double xDevValue;
     double yDevValue;
 
-//        cout << "x: [";
-//        for(size_t i = 0 ; i < xPos.size(); i++) {
-//            cout << xPos.at(i) << "  ";
-//        }
-//        cout << "]\n";
-//
-//        cout << "y: [";
-//        for(size_t i = 0 ; i < yPos.size(); i++) {
-//            cout << yPos.at(i) << "  ";
-//        }
-//        cout << "]\n";
 
     xDevValue = this->getStddev(&xPos);
     yDevValue = this->getStddev(&yPos);
 
-//    cout << endl << "XDev: " << xDevValue << "\n";
-//    cout << "YDev: " << yDevValue << "\n\n";
 
     if(xDevValue < 2 && yDevValue < 2) {
         *isFall = true;

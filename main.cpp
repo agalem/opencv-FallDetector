@@ -20,6 +20,7 @@ using namespace std;
 using namespace cv;
 
 int main() {
+    //VideoCapture cap("/Users/agalempaszek/Desktop/opencv-lab/falls.avi");
     VideoCapture cap(0);
 
     FallDetector fallDetector;
